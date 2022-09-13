@@ -6,8 +6,10 @@ public class SupersonicAirplaneExample {
         sa.takeOff();
         sa.fly();
         sa.flyMode = SupersonicAirplane.SUPERSONIC;
+        System.out.println(sa.flyMode);
         sa.fly();
         sa.flyMode = SupersonicAirplane.NORMAL;
+        System.out.println(sa.flyMode);
         sa.fly();
         sa.land();
     }
