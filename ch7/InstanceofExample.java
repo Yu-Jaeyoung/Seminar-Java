@@ -11,11 +11,8 @@ public class InstanceofExample {
     }
     
     public static void method2(Parent parent){
-<<<<<<< HEAD
         //Child child = (Child) parent; //ClassCastException 발생 가능성 있음
-=======
         Child child = (Child) parent; //method2(parentB) 에서 ClassCastException 발생
->>>>>>> 11e6a59 (update)
         System.out.println("method2 - changed to Child");
     }
     
