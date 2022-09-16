@@ -1,7 +1,5 @@
 package ch8;
 
-import java.rmi.Remote;
-
 public class Television implements RemoteControl{
     //필드
     private int volume;
