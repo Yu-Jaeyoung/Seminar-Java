@@ -19,5 +19,7 @@
 
 **7. [상속](https://www.notion.so/7-2190463c59194b66b7a322b7633f6353)**
 
+**8. [인터페이스](https://www.notion.so/8-ed693f0caec2433c93d9ef1231a35f37)**
+
 
 
