@@ -8,8 +8,8 @@ public class CarExample {
 
         System.out.println("------Change TIre------");
 
-        myCar.frontLeftTire = new KumhoTire();
-        myCar.frontRightTire = new KumhoTire();
+        myCar.tires[0] = new KumhoTire();
+        myCar.tires[1] = new KumhoTire();
 
         myCar.run();
     }
