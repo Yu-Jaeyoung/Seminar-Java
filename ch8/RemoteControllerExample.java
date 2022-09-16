@@ -7,11 +7,11 @@ public class RemoteControllerExample {
 
         rc = new Television();
         rc.turnOn();
-        rc.turnOff();
+        rc.setMute(true);
 
         rc = new Audio();
         rc.turnOn();
-        rc.turnOff();
+        rc.setMute(true);
 
     }
 }
