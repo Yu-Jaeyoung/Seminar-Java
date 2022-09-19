@@ -1,7 +1,7 @@
 package ch7;
 
 public class A {
-    protected String field;
+    public String field;
 
     protected A() {
     }
