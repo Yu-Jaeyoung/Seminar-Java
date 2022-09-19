@@ -1,7 +1,7 @@
 # seminar-java
 ## Studying java for ...
 
-
+JAVA Seminar 학습 중 테스트
 ### What I have done
 - linked to Notion
 
