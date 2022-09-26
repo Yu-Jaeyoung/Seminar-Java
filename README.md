@@ -21,6 +21,8 @@ JAVA Seminar 학습 중 테스트
 
 **8. [인터페이스](https://www.notion.so/8-ed693f0caec2433c93d9ef1231a35f37)**
 
+**9. [중첩 클래스와 중첩 인터페이스](https://www.notion.so/9-d3baa4bc715c4b89a246a3505fb559f1)**
+
 #### Looking At
 
 **1. [Conventional of java](https://naver.github.io/hackday-conventions-java/)**
