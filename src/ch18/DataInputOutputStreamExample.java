@@ -6,7 +6,7 @@ import java.io.FileOutputStream;
 
 public class DataInputOutputStreamExample {
     public static void main(String[] args) throws Exception {
-        FileOutputStream fos = new FileOutputStream("");
+        FileOutputStream fos = new FileOutputStream("src/ch18/primitive.dat");
         DataOutputStream dos = new DataOutputStream(fos);
 
         dos.writeUTF("홍길동");
@@ -21,7 +21,7 @@ public class DataInputOutputStreamExample {
         dos.close();
         fos.close();
 
-        FileInputStream fis = new FileInputStream("");
+        FileInputStream fis = new FileInputStream("src/ch18/primitive.dat");
         DataInputStream dis = new DataInputStream(fis);
 
         for (int i = 0; i < 2; i++) {

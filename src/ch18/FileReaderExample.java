@@ -4,7 +4,7 @@ import java.io.*;
 
 public class FileReaderExample {
     public static void main(String[] args) throws Exception {
-        FileReader fr = new FileReader("");
+        FileReader fr = new FileReader("src/ch18/FileReaderExample.java");
 
         int readCharNo;
         char[] cbuf = new char[100];

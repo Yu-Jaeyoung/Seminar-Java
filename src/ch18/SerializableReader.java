@@ -4,7 +4,7 @@ import java.io.*;
 
 public class SerializableReader {
     public static void main(String[] args) throws Exception {
-        FileInputStream fis = new FileInputStream("");
+        FileInputStream fis = new FileInputStream("src/ch18/Object.dat");
         ObjectInputStream ois = new ObjectInputStream(fis);
 
         ClassA v = (ClassA) ois.readObject();

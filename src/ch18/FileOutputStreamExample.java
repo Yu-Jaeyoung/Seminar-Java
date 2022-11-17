@@ -5,8 +5,8 @@ import java.io.FileOutputStream;
 
 public class FileOutputStreamExample {
     public static void main(String[] args) throws Exception {
-        String originalFileName = "";
-        String targetFileName = "";
+        String originalFileName = "src/ThisisJava.jpeg";
+        String targetFileName = "src/ch18/CopyedThisisJava.jpeg";
 
         FileInputStream fis = new FileInputStream(originalFileName);
         FileOutputStream fos = new FileOutputStream(targetFileName);

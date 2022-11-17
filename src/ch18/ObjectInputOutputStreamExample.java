@@ -4,7 +4,7 @@ import java.io.*;
 
 public class ObjectInputOutputStreamExample {
     public static void main(String[] args) throws Exception {
-        FileOutputStream fos = new FileOutputStream("");
+        FileOutputStream fos = new FileOutputStream("src/ch18/Object.dat");
         ObjectOutputStream oos = new ObjectOutputStream(fos);
 
         oos.writeObject(new Integer(10));
@@ -16,7 +16,7 @@ public class ObjectInputOutputStreamExample {
         oos.close();
         fos.close();
 
-        FileInputStream fis = new FileInputStream("");
+        FileInputStream fis = new FileInputStream("src/ch18/Object.dat");
         ObjectInputStream ois = new ObjectInputStream(fis);
 
         Integer obj1 = (Integer) ois.readObject();

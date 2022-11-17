@@ -4,7 +4,7 @@ import java.io.*;
 
 public class OutputStreamWriterExample {
     public static void main(String[] args) throws Exception {
-        FileOutputStream fos = new FileOutputStream("");
+        FileOutputStream fos = new FileOutputStream("src/ch18/file.txt");
         Writer writer = new OutputStreamWriter(fos);
 
         String data = "바이트 출력 스트림을 문자 출력 스트림으로 변환";

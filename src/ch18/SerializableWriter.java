@@ -4,7 +4,7 @@ import java.io.*;
 
 public class SerializableWriter {
     public static void main(String[] args) throws Exception {
-        FileOutputStream fos = new FileOutputStream("");
+        FileOutputStream fos = new FileOutputStream("src/ch18/Object.dat");
         ObjectOutputStream oos = new ObjectOutputStream(fos);
         ClassA classA = new ClassA();
         classA.field1 = 1;

@@ -13,9 +13,9 @@ public class BufferedOutputStreamExample {
         long start = 0;
         long end = 0;
 
-        fis = new FileInputStream("");
+        fis = new FileInputStream("src/ThisisJava.jpeg");
         bis = new BufferedInputStream(fis);
-        fos = new FileOutputStream("");
+        fos = new FileOutputStream("src/ch18/CopyedThisisJava.jpeg");
         start = System.currentTimeMillis();
         while ((data = bis.read()) != -1) {
             fos.write(data);
@@ -27,9 +27,9 @@ public class BufferedOutputStreamExample {
         fis.close();
         System.out.println("사용하지 않았을 때: " + (end - start) + "ms");
 
-        fis = new FileInputStream("");
+        fis = new FileInputStream("src/ch18/CopyedThisisJava.jpeg");
         bis = new BufferedInputStream(fis);
-        fos = new FileOutputStream("");
+        fos = new FileOutputStream("src/ThisisJava.jpeg");
         bos = new BufferedOutputStream(fos);
         start = System.currentTimeMillis();
         while ((data = bis.read()) != -1) {

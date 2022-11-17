@@ -4,7 +4,7 @@ import java.io.*;
 
 public class NonSerializableParentExample {
     public static void main(String[] args) throws Exception {
-        FileOutputStream fos = new FileOutputStream("");
+        FileOutputStream fos = new FileOutputStream("src/ch18/Object.dat");
         ObjectOutputStream oos = new ObjectOutputStream(fos);
         Child child = new Child();
         child.field1 = "홍길동";
@@ -14,7 +14,7 @@ public class NonSerializableParentExample {
         oos.close();
         fos.close();
 
-        FileInputStream fis = new FileInputStream("");
+        FileInputStream fis = new FileInputStream("src/ch18/Object.dat");
         ObjectInputStream ois = new ObjectInputStream(fis);
         Child v = (Child) ois.readObject();
         System.out.println("field1: " + v.field1);
