@@ -1,16 +1,18 @@
 package ch18;
 
 import java.io.*;
+import java.util.Arrays;
 
 public class ObjectInputOutputStreamExample {
     public static void main(String[] args) throws Exception {
         FileOutputStream fos = new FileOutputStream("src/ch18/Object.dat");
         ObjectOutputStream oos = new ObjectOutputStream(fos);
 
-        oos.writeObject(new Integer(10));
-        oos.writeObject(new Double(3.14));
+        String str[] = {"홍길동", "dsad"};
+        oos.writeObject((10));
+        oos.writeObject((3.14));
         oos.writeObject(new int[]{1, 2, 3});
-        oos.writeObject(new String("홍길동"));
+        oos.writeObject(str);
 
         oos.flush();
         oos.close();

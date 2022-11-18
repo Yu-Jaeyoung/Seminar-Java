@@ -8,11 +8,7 @@ empty: 스택이 비어있으면 1, 아니면 0을 출력한다.
 top: 스택의 가장 위에 있는 정수를 출력한다. 만약 스택에 들어있는 정수가 없는 경우에는 -1을 출력한다.*/
 
 import java.io.BufferedReader;
-import java.io.InputStream;
 import java.io.InputStreamReader;
-import java.io.Reader;
-import java.util.Arrays;
-import java.util.Scanner;
 import java.util.Stack;
 
 public class Homework {
@@ -21,16 +17,13 @@ public class Homework {
     private static String[] token;
     private static String lineString;
 
-    private static Stack<Integer> stack = new Stack<Integer>();
+    private static Stack<Integer> stack = new Stack<>();
 
 
     public static void main(String[] args) throws Exception {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
-        Scanner scanner = new Scanner(System.in);
-        max = scanner.nextInt();
-        InputStream is = System.in;
-        Reader reader = new InputStreamReader(is);
-        BufferedReader br = new BufferedReader(reader); // 버퍼 스트림 생성
+        max = Integer.parseInt(br.readLine());
 
         for (int i = 0; i < max; i++) {
             lineString = br.readLine();
