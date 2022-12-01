@@ -1,2 +1,1 @@
-1-Hamburger-5000-This is Hamburger.
--2-Ramen-3000-This is Ramen.
+1-Hamburger-5000-This is Hamburger.-2-Ramen-3000-This is Ramen.-3-Kimbob-2500-This is Kimbob.

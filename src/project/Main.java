@@ -34,7 +34,7 @@ public class Main {
 
 
     private static void createAccount() {
-        int count = 0, i = 0;
+        int count = -1, i = 0;
 
         for (; i < user.length; i++) {
             if (user[i] == null) {
@@ -44,26 +44,24 @@ public class Main {
             }
         }
 
-        if (count == user.length) {
-            System.out.println(" Account Full");
+        if (count == user.length - 1) {
+            System.out.println("Can't Create New Account");
             return;
+            //10개의 계정이 가득 찬 상태
+            //메소드 실행 강제 종료
         }
 
-        String id, idforcheck, password, nickname;
+        String id, password, nickname;
 
         System.out.print("ID : ");
         id = scanner.next();
 
-        for (; i < user.length; i++) {
-            if (user[i] != null) {
-                idforcheck = user[i].getId();
-                System.out.println(idforcheck);
-                if (id.equals(idforcheck)) {
-                    System.out.println(" !! Same ID Detected !! ");
-                    return;
-                }
-            }
-
+        boolean check;
+        check = overlapIdCheck(id);
+        if (!check) {
+            System.out.println("Overlap Id found");
+            count--;
+            return;
         }
 
         System.out.print("Password : ");
@@ -72,36 +70,18 @@ public class Main {
         System.out.print("NickName : ");
         nickname = scanner.next();
 
-        user[count] = new User(id, password, nickname);
+        User newUser = new User(id, password, nickname);
 
-        System.out.println(user[count].getId() + " " + user[count].getPassword() + " " + user[count].getNickName());
-        System.out.println(count);
-    }
-
-    private static void deleteAccount() {
-        int i = 0;
-
-        String id, password;
-
-        System.out.print("ID : ");
-        id = scanner.next();
-
-        System.out.print("Password : ");
-        password = scanner.next();
 
         for (; i < user.length; i++) {
-            try {
-                if (id.equals(user[i].getId()) && (password.equals(user[i].getPassword()))) {
-                    user[i] = null;
-                    System.out.println(" !! Resigned !! ");
-                    return;
-                }
-            } catch (NullPointerException e) {
-
+            if (user[i] == null) {
+                user[i] = newUser;
+                System.out.println("Create Success");
+                break;
             }
         }
-
     }
+
 
     private static void accessLogin() {
         int i = 0;
@@ -113,19 +93,78 @@ public class Main {
         System.out.print("Password : ");
         password = scanner.next();
 
-        for (; i < user.length; i++) {
-            try {
+        boolean check;
+        check = matchUser(id, password);
+
+        if (check) {
+            System.out.println("Login succeed");
+            System.out.println("Welcome " + user[userNum(id)].getNickName()+ ".");
+        } else {
+            System.out.println("Login failed");
+        }
+    }
 
 
-                if (id.equals(user[i].getId()) && (password.equals(user[i].getPassword()))) {
-                    System.out.println("Welcome " + user[i].getNickName() + ".");
-                    return;
+    //탈퇴
+    private static void deleteAccount() {
+
+        System.out.print(" ID : ");
+        String id = scanner.next();
+        System.out.print(" Password : ");
+        String password = scanner.next();
+        System.out.println();
+
+        for (int i = 0; i < user.length; i++) {
+            if (user[i] != null) {
+                if (user[i].getId().equals(id) && user[i].getPassword().equals(password)) {
+                    user[i] = null;
+                    System.out.println(" !! Resigned !! ");
+                    System.out.println();
+                    return; //이 상황에선 탈퇴 메소드 종료
                 }
-            } catch (NullPointerException e) {
-
             }
         }
+        System.out.println("Resign failed");
+    }
 
-        System.out.println("Login failed");
+    //로그인용 메소드
+    //userArray 배열에서 id,password 와 동일한 userArray 배열 찾기
+    private static boolean matchUser(String id, String password) {
+        for (int i = 0; i < user.length; i++) {
+            if (user[i] != null) {
+                String newId = user[i].getId();
+                String newPassword = user[i].getPassword();
+                if (newId.equals(id)) {
+                    if (newPassword.equals(password)) {
+                        return true;
+                    }
+                }
+            }
+        }
+        return false;
+    }
+
+    private static boolean overlapIdCheck(String id) {
+        for (int i = 0; i < user.length; i++) {
+            if (user[i] != null) {
+                String newId = user[i].getId();
+                if (newId.equals(id)) {
+                    return false;
+                }
+            }
+        }
+        return true;
+    }
+
+    private static int userNum(String id) {
+        for (int i = 0; i < user.length; i++) {
+            if (user[i] != null) {
+                String newId = user[i].getId();
+                if (newId.equals(id)) {
+                    return i;
+                }
+            }
+        }
+        return 0;
     }
 }
