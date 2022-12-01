@@ -1,4 +1,3 @@
-/*
 package project;
 
 import java.util.*;
@@ -8,8 +7,7 @@ public class Test {
 
     public static void main(String[] args) throws Exception {
 
-        Menu[] menus = new Menu[10];
-
+        List<Menu> menus = new Vector<Menu>();
         int count = 0;
         FileReader fr = new FileReader("src/project/Menu.txt");
 
@@ -28,20 +26,14 @@ public class Test {
             int priceToken = Integer.parseInt(st.nextToken());
             String infoToken = st.nextToken();
 
-            menus[count] = new Menu(numToken, menuToken, priceToken, infoToken);
-
-            count++;
+            menus.add(new Menu(numToken, menuToken, priceToken, infoToken));
         }
-        for (int i = 0; i < count; i++) {
-            System.out.println("Printing");
-            menus[i].printNum();
-            menus[i].printMenu();
-            menus[i].printPrice();
-            menus[i].printInfo();
+        for (int i = 0; i < menus.size(); i++) {
+         Menu menu = menus.get(i);
+            System.out.println(menu.num + "\t" + menu.menu + "\t" + menu.price + "\t" + menu.info);
         }
 
         fr.close();
     }
 }
 
-*/
