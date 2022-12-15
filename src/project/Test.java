@@ -8,7 +8,7 @@ public class Test {
     public static void main(String[] args) throws Exception {
 
         List<Menu> menus = new Vector<Menu>();
-        int count = 0;
+
         FileReader fr = new FileReader("src/project/Menu.txt");
 
         int readCharNo;
@@ -30,7 +30,12 @@ public class Test {
         }
         for (int i = 0; i < menus.size(); i++) {
          Menu menu = menus.get(i);
-            System.out.println(menu.num + "\t" + menu.menu + "\t" + menu.price + "\t" + menu.info);
+            //System.out.println(menu.num + "\t" + menu.menu + "\t" + menu.price + "\t" + menu.info);
+            System.out.printf("%-5d",menu.num);
+            System.out.printf("%-13s",menu.menu);
+            System.out.printf("%-8d",menu.price);
+            System.out.printf("%-30s",menu.info);
+            System.out.println();
         }
 
         fr.close();

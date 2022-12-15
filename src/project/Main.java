@@ -6,8 +6,10 @@ public class Main {
     int i = 0;
     final static Scanner scanner = new Scanner(System.in);
     final static User[] user = new User[10];
+    static VectorListMenu VLM = new VectorListMenu();
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
+
         int selectNum;
         do {
             System.out.println("--------------------------------------------------------");
@@ -17,7 +19,10 @@ public class Main {
             selectNum = scanner.nextInt();
 
             if (selectNum == 1) {
-                accessLogin();
+                if (accessLogin()) {
+                    VLM.pickMenu();
+                    VLM.payment();
+                }
             } else if (selectNum == 2) {
                 createAccount();
             } else if (selectNum == 3) {
@@ -83,7 +88,7 @@ public class Main {
     }
 
 
-    private static void accessLogin() {
+    private static boolean accessLogin() {
         int i = 0;
 
         String id, password;
@@ -98,9 +103,12 @@ public class Main {
 
         if (check) {
             System.out.println("Login succeed");
-            System.out.println("Welcome " + user[userNum(id)].getNickName()+ ".");
+            System.out.println("Welcome " + user[userNum(id)].getNickName() + ".");
+            System.out.println();
+            return true;
         } else {
             System.out.println("Login failed");
+            return false;
         }
     }
 

@@ -14,18 +14,20 @@ public class Menu {
     }
 
     public void printNum() {
-        System.out.println(this.num);
+        System.out.println(num);
     }
 
     public void printMenu() {
-        System.out.println(this.menu);
+        System.out.println(menu);
     }
 
     public void printPrice() {
-        System.out.println(this.price);
+        System.out.println(price);
     }
 
     public void printInfo() {
-        System.out.println(this.info);
+        System.out.println(info);
     }
+
+    public int getPrice() { return price;}
 }
