@@ -2,7 +2,7 @@ package project;
 
 import java.util.*;
 import java.io.FileReader;
-import java.util.Scanner;
+import java.util.Scanner;   
 
 public class VectorListMenu {
     Scanner scanner = new Scanner(System.in); // 스캐너 사용을 위해 Scanner 객체 생성
@@ -91,20 +91,12 @@ public class VectorListMenu {
 
         switch (select) {
             case 1:
-                System.out.println("카드로 결제합니다.");
-                System.out.println();
-                System.out.println();
-                System.out.println("Logout");
-                System.out.println();
-                System.out.println();
+                System.out.println("카드로 결제합니다.\n\n");
+                System.out.println("Logout\n\n");
                 break;
             case 2:
-                System.out.println("현금으로 결제합니다.");
-                System.out.println();
-                System.out.println();
-                System.out.println("Logout");
-                System.out.println();
-                System.out.println();
+                System.out.println("현금으로 결제합니다.\n\n");
+                System.out.println("Logout\n\n");
                 break;
 
         }
