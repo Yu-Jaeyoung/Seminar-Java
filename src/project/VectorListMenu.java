@@ -44,9 +44,7 @@ public class VectorListMenu {
     }
 
     protected void pickMenu() throws Exception {
-
         List<Menu> pickMenus = new Vector<Menu>();
-
         System.out.println("메뉴를 선택하시오. (0 입력시 선택 초기화, -1 입력시 선택 종료)");
 
         List<Menu> menus = viewMenu(); // 메뉴판 보여주기
@@ -60,18 +58,15 @@ public class VectorListMenu {
                 pickMenus.add(menus.get(inputInt - 1));
                 count++;
                 System.out.println(" 메뉴가 추가되었습니다.");
-
-            }
-
-            if (inputInt == 0) {
+            } else if (inputInt == 0) {
                 pickMenus.clear();
                 System.out.println("메뉴 선택이 초기화되었습니다.");
                 count = -1;
-            }
-
-            if (inputInt == -1) {
+            } else if (inputInt == -1) {
                 System.out.println("메뉴 선택 종료");
                 break;
+            } else {
+                System.out.println("잘못 입력하셨습니다. 다시 입력해주세요.");
             }
 
             /*System.out.println("현재까지 추가된 메뉴");
@@ -81,9 +76,7 @@ public class VectorListMenu {
             // 수정+추가 되어야될 부분
 
         }
-
         int sum = pickMenus.stream().mapToInt(Menu::getPrice).sum();
-
         System.out.println("총 금액은 " + sum + "원 입니다.");
         System.out.println();
     }
@@ -96,9 +89,8 @@ public class VectorListMenu {
         System.out.print(">> ");
         int select = scanner.nextInt();
 
-        switch (select)
-        {
-            case 1 :
+        switch (select) {
+            case 1:
                 System.out.println("카드로 결제합니다.");
                 System.out.println();
                 System.out.println();
