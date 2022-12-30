@@ -10,7 +10,7 @@ public class VectorListMenu {
     private static List<Menu> viewMenu() throws Exception {
         List<Menu> menus = new Vector<Menu>();
 
-        FileReader fr = new FileReader("src/java_2022.project/Menu.txt");
+        FileReader fr = new FileReader("src/java_2022/project/Menu.txt");
 
         int readCharNo;
         char[] cbuf = new char[100];
