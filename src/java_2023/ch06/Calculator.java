@@ -42,4 +42,14 @@ public class Calculator {
     double areaRectangle(double width, double height) {
         return width * height;
     }
+
+    static double pi = 3.14159;
+
+    static int plus2(int x, int y) {
+        return x + y;
+    }
+
+    static int minus2(int x, int y) {
+        return x - y;
+    }
 }

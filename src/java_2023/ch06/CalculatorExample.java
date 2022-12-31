@@ -24,6 +24,14 @@ public class CalculatorExample {
 
         System.out.println("정사각형 넓이 = " + result3);
         System.out.println("직사각형 넓이 = " + result4);
+        System.out.println();
 
+        double result5 = 10 * 10 * Calculator.pi;
+        int result6 = Calculator.plus2(10, 5);
+        int result7 = Calculator.minus2(10, 5);
+
+        System.out.println("result 5 : " + result5);
+        System.out.println("result 6 : " + result6);
+        System.out.println("result 7 : " + result7);
     }
 }
