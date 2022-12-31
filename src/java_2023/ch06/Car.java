@@ -7,6 +7,9 @@ public class Car {
     String color = "검정";
     int maxSpeed = 350;
     int speed;
+
+    private int speed2;
+    private boolean stop;
     int gas;
 
     // 생성자
@@ -91,5 +94,26 @@ public class Car {
         Car myCar = new Car();
         myCar.speed = 60;
         myCar.run4();
+    }
+
+    public int getSpeed2() {
+        return speed2;
+    }
+
+    public void setSpeed2(int speed2) {
+        if (speed2 < 0) {
+            this.speed2 = 0;
+        } else {
+            this.speed2 = speed2;
+        }
+    }
+
+    public boolean isStop() {
+        return stop;
+    }
+
+    public void setStop(boolean stop) {
+        this.stop = stop;
+        this.speed2 = 0;
     }
 }
