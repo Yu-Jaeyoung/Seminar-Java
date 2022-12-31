@@ -7,4 +7,26 @@ public class Car {
     String color = "검정";
     int maxSpeed = 350;
     int speed;
+
+    // 생성자
+    Car() {
+
+    }
+
+    Car(String model) {
+        this(model, "은색",250);
+    }
+
+    Car(String model, String color) {
+        this(model, color, 250);
+    }
+
+    Car(String model, String color, int maxSpeed) {
+        this.model = model;
+        this.color = color;
+        this.maxSpeed = maxSpeed;
+    }
+
+    Car(String color, int cc){
+    }
 }
