@@ -71,4 +71,15 @@ public class Car {
             System.out.println("달립니다. (시속 : " + speed + "km/h)");
         }
     }
+
+    void setSpeed(int speed) {
+        this.speed = speed;
+    }
+
+    void run3() {
+        for (int i = 10; i <= 50; i += 10) {
+            this.setSpeed(i);
+            System.out.println(this.model + "가 달립니다. (시속 : " + this.speed + "km/h)");
+        }
+    }
 }

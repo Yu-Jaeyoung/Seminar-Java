@@ -58,5 +58,12 @@ public class CarExample {
         myCar.run2();
         int speed = myCar.getSpeed();
         System.out.println("현재 속도 : " + speed + "km/h");
+        System.out.println();
+
+        Car myCar2 = new Car("포르쉐");
+        Car yourCar = new Car("벤츠");
+
+        myCar2.run3();
+        yourCar.run3();
     }
 }
