@@ -1,0 +1,13 @@
+package java_2023.ch08;
+
+public interface MyInterface {
+    // 기존 인터페이스
+    // public void method1();
+
+    // 수정 인터페이스
+    public void method1();
+
+    public default void method2(){
+        System.out.println("MyInterface-method2 실행");
+    }
+}
