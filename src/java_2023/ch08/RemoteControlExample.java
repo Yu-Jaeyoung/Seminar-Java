@@ -7,10 +7,10 @@ public class RemoteControlExample {
 
         rc = new Television(); // Television 객체를 인터페이스 타입에 대입
         rc.turnOn(); // 인터페이스의 메소드 호출
-        rc.turnOff(); // 인터페이스의 메소드 호출
+        rc.setMute(true);
 
         rc = new Audio(); // Audio 객체를 인터페이스 타입에 대입
         rc.turnOn(); // 인터페이스의 메소드 호출
-        rc.turnOff(); // 인터페이스의 메소드 호출
+        rc.setMute(true);
     }
 }
