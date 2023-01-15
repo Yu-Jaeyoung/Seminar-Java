@@ -8,9 +8,9 @@ public class CarExample {
 
         System.out.println("After Change Tire"); // 필드 다형성
 
-        myCar.frontLeftTire = new KumhoTire();
-        myCar.frontRightTire = new KumhoTire();
+        myCar.tires[0] = new KumhoTire();
+        myCar.tires[1] = new KumhoTire();
 
-        myCar. run();
+        myCar.run();
     }
 }
