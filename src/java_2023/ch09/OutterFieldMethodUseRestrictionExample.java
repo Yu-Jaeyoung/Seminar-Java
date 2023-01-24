@@ -1,6 +1,6 @@
 package java_2023.ch09;
 
-public class OutterFieldMethodUseRestriction {
+public class OutterFieldMethodUseRestrictionExample {
     // 인스턴스 필드
     B field = new B();
     C field2 = new C();
