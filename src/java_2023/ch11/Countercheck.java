@@ -1,9 +1,9 @@
 package java_2023.ch11;
 
-public class Counter {
+public class Countercheck {
     private int no;
 
-    public Counter(int no) {
+    public Countercheck(int no) {
         this.no = no;
     }
 
