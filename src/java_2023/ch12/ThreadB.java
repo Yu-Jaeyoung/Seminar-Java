@@ -1,17 +1,16 @@
 package java_2023.ch12;
 
-public class ThreadB extends Thread{
-    public boolean stop = false;
-    public boolean work = true;
+public class ThreadB extends Thread {
+    private WorkObject workObject;
 
-    public void run() {
-        while (stop) {
-            if (work) {
-                System.out.println("ThreadB1 작업 내용");
-            } else { // work가 false가 되면 다른 스레드에게 실행 양보
-                Thread.yield();
-            }
+    public ThreadB(WorkObject workObject) {
+        this.workObject = workObject;  //공유 객체를 매개값으로 받아 필드에 저장
+    }
+
+    @Override
+    public void run() { //공유 객체의 methodB()를 10번 반복 호출
+        for (int i = 0; i < 10; i++) {
+            workObject.methodB();
         }
-        System.out.println("ThreadB 종료");
     }
 }
