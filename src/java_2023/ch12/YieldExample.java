@@ -1,7 +1,7 @@
 package java_2023.ch12;
 
 public class YieldExample {
-    public static void main(String[] args) {
+    /*public static void main(String[] args) {
         ThreadA threadA = new ThreadA();
         ThreadB threadB = new ThreadB();
 
@@ -30,5 +30,5 @@ public class YieldExample {
         threadA.stop = true;
         threadB.stop = true;
         //ThreadA1, ThreadB1 모두 종료
-    }
+    }*/
 }
