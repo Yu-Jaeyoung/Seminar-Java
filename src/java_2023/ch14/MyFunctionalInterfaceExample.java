@@ -36,7 +36,8 @@ public class MyFunctionalInterfaceExample {
         fi.method(2);
         */
 
-        // 리턴값이 있는 람다식
+
+        /* 리턴값이 있는 람다식
         fi = (x, y) -> {
             int result = x + y;
             return result;
@@ -53,6 +54,7 @@ public class MyFunctionalInterfaceExample {
 
         fi = (x, y) -> sum(x, y);
         System.out.println(fi.method(2, 5));
+        */
     }
 
     public static int sum(int x, int y) {
