@@ -6,7 +6,7 @@ import java.util.function.Function;
 import java.util.function.ToIntFunction;
 
 public class FunctionExample1 {
-    private static List<Student> list = Arrays.asList(
+    /*private static List<Student> list = Arrays.asList(
             new Student("홍길동", 90, 96),
             new Student("신용권", 95, 93)
     );
@@ -34,5 +34,5 @@ public class FunctionExample1 {
 
         System.out.println("[수학 점수]");
         printInt((t -> t.getMathScore()));
-    }
+    }*/
 }
