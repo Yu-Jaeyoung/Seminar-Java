@@ -1,5 +1,4 @@
 package java_2023.ch16;
-
 import java.util.Arrays;
 import java.util.List;
 
